@@ -3,9 +3,9 @@ import Stat from './Stat';
 
 const stats = [
   {
-    label: 'Last 30 days',
-    value: '5,543 $',
-    delta: { value: '12.5%', isUpwardsTrend: true },
+    label: 'Today',
+    value: '432,53 $',
+    delta: { value: '1.5%', isUpwardsTrend: true },
   },
   {
     label: 'Total profit',

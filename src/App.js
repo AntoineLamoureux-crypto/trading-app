@@ -13,13 +13,13 @@ export default function App() {
     >
       <Box
         bg="rgba(211, 211, 211, 0.05)"
-        px="40px"
+        px={{ base: '0px', md: '40px' }}
         borderBottomRadius="20px"
         mx="10px"
       >
         <NavBar />
       </Box>
-      <Stack overflow="hidden" pb="10px" mx="40px">
+      <Stack overflow="hidden" pb="10px" mx={{ base: '10px', md: '40px' }}>
         <Dashboard />
       </Stack>
     </Flex>

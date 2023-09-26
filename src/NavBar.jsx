@@ -39,7 +39,7 @@ export default function NavBar() {
                   cursor="pointer"
                 />
               </PopoverTrigger>
-              <PopoverContent borderColor="black">
+              <PopoverContent borderColor="gray.900">
                 <PopoverArrow />
                 <PopoverHeader bg="black" borderColor="gray.900">
                   <Text
@@ -48,7 +48,7 @@ export default function NavBar() {
                     fontWeight="medium"
                     color="white"
                   >
-                    Your profile
+                    Settings
                   </Text>
                   <PopoverCloseButton />
                 </PopoverHeader>
@@ -56,7 +56,7 @@ export default function NavBar() {
                   <Box textColor="black">
                     <Stack spacing="5">
                       <Stack spacing="1">
-                        <Text textStyle="lg" fontWeight="medium">
+                        <Text textStyle="lg" fontWeight="medium" color="white">
                           Notifications
                         </Text>
                       </Stack>
@@ -78,7 +78,7 @@ export default function NavBar() {
                       ))}
                       <Stack spacing="1">
                         <Text textStyle="lg" fontWeight="medium" color="white">
-                          Information
+                          Profile
                         </Text>
                         <Stack
                           justify="space-between"
@@ -131,7 +131,7 @@ export default function NavBar() {
                     </Stack>
                   </Box>
                 </PopoverBody>
-                <PopoverFooter bg="black" borderColor="black">
+                <PopoverFooter bg="black" borderColor="gray.900">
                   <HStack textColor="black">
                     <Spacer />
 

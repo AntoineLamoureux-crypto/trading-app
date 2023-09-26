@@ -1,5 +1,5 @@
 import React from 'react';
-import { Stack, Flex } from '@chakra-ui/react';
+import { Flex, SimpleGrid, Box } from '@chakra-ui/react';
 import Stats from './Stats';
 import Header from './Header';
 import Trades from './Trades.jsx';
@@ -10,15 +10,13 @@ export default function Dashboard() {
   return (
     <>
       <Stats />
-      <Stack direction="horizontal">
-        <Header title="Open Trades" subtitle="On going trades." />
-        <Header title="Closed Trades" />
-      </Stack>
+
       <Flex
         w="100%"
         h="100%"
         gap="2"
         overflowY="auto"
+        direction="horizontal"
         css={{
           '&::-webkit-scrollbar': {
             width: '4px',
@@ -33,9 +31,16 @@ export default function Dashboard() {
         }}
         overflowX="hidden"
       >
-        <Trades title="Open trades" data={members} />
-
-        <Trades title="Closed trades" data={memberss} />
+        <SimpleGrid columns={{ base: 1, md: 2 }} gap="5" w="100%">
+          <Box>
+            <Header title="Open Trades" subtitle="On going trades." />
+            <Trades title="Open trades" data={members} />
+          </Box>
+          <Box>
+            <Header title="Closed Trades" />
+            <Trades title="Closed trades" data={memberss} />
+          </Box>
+        </SimpleGrid>
       </Flex>
     </>
   );
